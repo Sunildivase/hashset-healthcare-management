@@ -1,8 +1,6 @@
 package com.hashsethealthcaremanagement;
 
-import com.hashsethealthcaremanagement.service.DoctorService;
-import com.hashsethealthcaremanagement.service.HospitalService;
-import com.hashsethealthcaremanagement.service.PersonService;
+import com.hashsethealthcaremanagement.service.*;
 
 import java.util.Scanner;
 
@@ -42,7 +40,41 @@ public class HashsetHealthcareDemo {
 
                 case 3:
                     HospitalService hospitalService = new HospitalService();
-                    hospitalService.
+                    hospitalService.createHospital();
+                    hospitalService.displayHospital();
+                    System.out.println("hospital created successfully");
+
+                case 4:
+                    DepartmentService departmentService = new DepartmentService();
+                    departmentService.createDepartment();
+                    departmentService.displayDepartment();
+                    System.out.println("department created successfully");
+                    break;
+
+                case 5:
+                    AppointmentService appointmentService = new AppointmentService();
+                    appointmentService.createAppointment();
+                    appointmentService.displayAppointment();
+                    System.out.println("appointment created successfully");
+                    break;
+
+                case 6:
+                    PrescriptionService prescriptionService = new PrescriptionService();
+                    prescriptionService.createPrescription();
+                    prescriptionService.displayPrescription();
+                    System.out.println("prescription created successfully");
+                    break;
+
+                case 7:
+                    BillingService billingService = new BillingService();
+                    billingService.createBilling();
+                    billingService.displayBilling();
+                    System.out.println("bill generated");
+                    break;
+
+                default:
+                    System.out.println("please enter valid input");
+                    break;
             }
         }while(option != 0);{
             System.out.println("thank You!!!");

@@ -53,4 +53,13 @@ public class HospitalService {
             System.out.println("hospial created "+ hospital);
         }
     }
+
+//    public boolean deleteHospital(int hospitalId){
+//        boolean removedHospital = hospitals.remove(hospitalId);
+//        return removedHospital;
+//    }
+
+    public void deleteAllHospital(){
+        hospitals.clear();
+    }
 }

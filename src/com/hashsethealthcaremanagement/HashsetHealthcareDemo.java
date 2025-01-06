@@ -28,6 +28,8 @@ public class HashsetHealthcareDemo {
                     PersonService personService = new PersonService();
                     personService.createPerson();
                     personService.displayPerson();
+//                    personService.deletePerson(1);
+                    personService.deleteAllPerson();
                     System.out.println("person created successfully");
                     break;
 
@@ -35,6 +37,8 @@ public class HashsetHealthcareDemo {
                     DoctorService doctorService = new DoctorService();
                     doctorService.createDoctor();
                     doctorService.displayDoctor();
+//                    doctorService.deleteDoctor(1);
+                    doctorService.deleteAllDoctor();
                     System.out.println("doctor created successfully");
                     break;
 
@@ -42,12 +46,16 @@ public class HashsetHealthcareDemo {
                     HospitalService hospitalService = new HospitalService();
                     hospitalService.createHospital();
                     hospitalService.displayHospital();
+//                    hospitalService.deleteHospital(1);
+                    hospitalService.deleteAllHospital();
                     System.out.println("hospital created successfully");
 
                 case 4:
                     DepartmentService departmentService = new DepartmentService();
                     departmentService.createDepartment();
                     departmentService.displayDepartment();
+//                    departmentService.deleteDepartment(1);
+                    departmentService.deleteAllDepartment();
                     System.out.println("department created successfully");
                     break;
 
@@ -55,6 +63,8 @@ public class HashsetHealthcareDemo {
                     AppointmentService appointmentService = new AppointmentService();
                     appointmentService.createAppointment();
                     appointmentService.displayAppointment();
+//                    appointmentService.deleteAppointment(1);
+                    appointmentService.deleteAllAppointment();
                     System.out.println("appointment created successfully");
                     break;
 
@@ -62,6 +72,8 @@ public class HashsetHealthcareDemo {
                     PrescriptionService prescriptionService = new PrescriptionService();
                     prescriptionService.createPrescription();
                     prescriptionService.displayPrescription();
+//                    prescriptionService.deletePrescription(1);
+                    prescriptionService.deleteAllPrescription();
                     System.out.println("prescription created successfully");
                     break;
 
@@ -69,6 +81,8 @@ public class HashsetHealthcareDemo {
                     BillingService billingService = new BillingService();
                     billingService.createBilling();
                     billingService.displayBilling();
+//                    billingService.deleteBilling(1);
+                    billingService.deleteAllBilling();
                     System.out.println("bill generated");
                     break;
 

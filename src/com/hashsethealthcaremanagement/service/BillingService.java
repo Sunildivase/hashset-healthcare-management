@@ -49,4 +49,13 @@ public class BillingService {
             System.out.println("billing created "+billing);
         }
     }
+
+//    public boolean deleteBilling(int billId){
+//        boolean removedBill = billings.remove(billId);
+//        return removedBill;
+//    }
+
+    public void deleteAllBilling(){
+        billings.clear();
+    }
 }

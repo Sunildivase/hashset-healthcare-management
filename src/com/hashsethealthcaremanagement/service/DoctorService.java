@@ -64,4 +64,14 @@ public class DoctorService {
             System.out.println("doctor created: "+doctor);
         }
     }
+
+//    public boolean deleteDoctor(int doctorId){
+//
+//        boolean removedDoctor = doctors.remove(doctorId);
+//        return removedDoctor;
+//    }
+
+    public void deleteAllDoctor(){
+        doctors.clear();
+    }
 }

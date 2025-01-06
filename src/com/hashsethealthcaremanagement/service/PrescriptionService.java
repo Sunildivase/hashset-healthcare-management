@@ -44,4 +44,13 @@ public class PrescriptionService {
             System.out.println("prescription created "+prescription);
         }
     }
+
+//    public boolean deletePrescription(int prescriptionId){
+//        boolean removedPrescription = prescriptions.remove(prescriptionId);
+//        return removedPrescription;
+//    }
+
+    public void deleteAllPrescription(){
+        prescriptions.clear();
+    }
 }

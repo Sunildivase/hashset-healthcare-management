@@ -70,4 +70,21 @@ public class PersonService {
             System.out.println("person created :"+ person);
         }
     }
+
+    public boolean deletePerson(int personId){
+
+        boolean removePerson = persons.remove(personId);
+
+//        if(removePerson=true) {
+//            System.out.println("person deleted: " + removePerson);
+//        }
+//        else{
+//            System.out.println("person not deleted");
+//        }
+        return removePerson;
+    }
+
+    public void deleteAllPerson(){
+        persons.clear();
+    }
 }

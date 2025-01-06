@@ -49,4 +49,12 @@ public class DepartmentService {
             System.out.println("create department "+department);
         }
     }
+//    public boolean deleteDepartment(int deptId){
+//       boolean removeDepartment= departments.remove(deptId);
+//        return removeDepartment;
+//    }
+
+    public void deleteAllDepartment(){
+        departments.clear();
+    }
 }

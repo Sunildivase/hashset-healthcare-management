@@ -53,4 +53,13 @@ public class AppointmentService {
             System.out.println("appointment created "+appointment);
         }
     }
+
+//    public boolean deleteAppointment(int appointmentId){
+//        boolean removedAppointment=appointments.remove(appointmentId);
+//        return removedAppointment;
+//    }
+
+    public void deleteAllAppointment(){
+        appointments.clear();
+    }
 }

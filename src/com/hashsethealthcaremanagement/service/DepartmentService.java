@@ -27,15 +27,20 @@ public class DepartmentService {
         int doctorId = Integer.parseInt(scanner.nextLine());
 
         System.out.println("please enter hospital id");
-        int hId = Integer.parseInt(scanner.nextLine());
+        int hospitalId = Integer.parseInt(scanner.nextLine());
 
         Department department =new Department();
         department.setDeptId(deptId);
         department.setDeptName(deptName);
         department.setDoctorId(doctorId);
-        department.sethId(hId);
+        department.sethospitalId(hospitalId);
 
-        departments.add(department);
+        if(departments.contains(department)){
+            System.out.println("department is already exist ");
+        }
+        else {
+            departments.add(department);
+        }
         return department;
     }
 

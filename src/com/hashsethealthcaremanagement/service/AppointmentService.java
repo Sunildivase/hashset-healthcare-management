@@ -18,7 +18,7 @@ public class AppointmentService {
     public Appointment createAppointment(){
 
         System.out.println("please enter appointment Id");
-        int aId = Integer.parseInt(scanner.nextLine());
+        int appointmentId = Integer.parseInt(scanner.nextLine());
 
         System.out.println("please enter person id");
         int personId = Integer.parseInt(scanner.nextLine());
@@ -27,19 +27,24 @@ public class AppointmentService {
         int doctorId = Integer.parseInt(scanner.nextLine());
 
         System.out.println("please enter hId");
-        int hId = Integer.parseInt(scanner.nextLine());
+        int hospitalId = Integer.parseInt(scanner.nextLine());
 
         System.out.println("please enter department id ");
         int deptId =Integer.parseInt(scanner.nextLine());
 
         Appointment appointment = new Appointment();
-        appointment.setaId(aId);
+        appointment.setAppointmentId(appointmentId);
         appointment.setPersonId(personId);
         appointment.setDoctorId(doctorId);
-        appointment.sethId(hId);
+        appointment.setHospitalId(hospitalId);
         appointment.setDeptId(deptId);
 
-        appointments.add(appointment);
+        if(appointments.contains(appointment)){
+            System.out.println("appointment already booked");
+        }
+        else {
+            appointments.add(appointment);
+        }
         return appointment;
 
     }

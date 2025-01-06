@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Billing {
 
-    private int bId;
+    private int billId;
     private int bill;
     private  int totalBill;
     private int personId;
@@ -12,7 +12,7 @@ public class Billing {
     @Override
     public String toString() {
         return "Billing{" +
-                "bId=" + bId +
+                "billId=" + billId +
                 ", bill=" + bill +
                 ", totalBill=" + totalBill +
                 ", personId=" + personId +
@@ -24,20 +24,20 @@ public class Billing {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Billing billing = (Billing) o;
-        return getbId() == billing.getbId() && getBill() == billing.getBill() && getTotalBill() == billing.getTotalBill() && getPersonId() == billing.getPersonId();
+        return getBillId() == billing.getBillId() && getBill() == billing.getBill() && getTotalBill() == billing.getTotalBill() && getPersonId() == billing.getPersonId();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getbId(), getBill(), getTotalBill(), getPersonId());
+        return Objects.hash(getBillId(), getBill(), getTotalBill(), getPersonId());
     }
 
-    public int getbId() {
-        return bId;
+    public int getBillId() {
+        return billId;
     }
 
-    public void setbId(int bId) {
-        this.bId = bId;
+    public void setBillId(int billId) {
+        this.billId = billId;
     }
 
     public int getBill() {

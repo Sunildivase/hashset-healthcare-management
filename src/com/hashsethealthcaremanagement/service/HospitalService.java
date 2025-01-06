@@ -18,13 +18,13 @@ public class HospitalService {
     public Hospital createHospital(){
 
         System.out.println("please enter id");
-        int hId = Integer.parseInt(scanner.nextLine());
+        int hospitalId = Integer.parseInt(scanner.nextLine());
 
         System.out.println("please enter hospital name");
-        String hName = scanner.nextLine();
+        String hospitalName = scanner.nextLine();
 
         System.out.println("please enter hospital name");
-        String hAddress = scanner.nextLine();
+        String hospitalAddress = scanner.nextLine();
 
         System.out.println("please enter contact no");
         String contactNo = scanner.nextLine();
@@ -33,13 +33,18 @@ public class HospitalService {
         String emailId = scanner.nextLine();
 
         Hospital hospital = new Hospital();
-        hospital.sethId(hId);
-        hospital.sethName(hName);
-        hospital.sethAddress(hAddress);
+        hospital.setHospitalId(hospitalId);
+        hospital.setHospitalName(hospitalName);
+        hospital.setHospitalAddress(hospitalAddress);
         hospital.setContactNo(contactNo);
         hospital.setEmailId(emailId);
 
-        hospitals.add(hospital);
+        if(hospitals.contains(hospital)){
+            System.out.println("already hospital in system");
+        }
+        else {
+            hospitals.add(hospital);
+        }
         return hospital;
 
     }

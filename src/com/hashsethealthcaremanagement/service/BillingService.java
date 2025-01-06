@@ -30,12 +30,17 @@ public class BillingService {
         int personId = Integer.parseInt(scanner.nextLine());
 
         Billing billing = new Billing();
-        billing.setbId(bId);
+        billing.setBillId(bId);
         billing.setBill(bill);
         billing.setTotalBill(totalBill);
         billing.setPersonId(personId);
 
-        billings.add(billing);
+        if(billings.contains(billing)){
+            System.out.println("Already bill generated");
+        }
+        else {
+            billings.add(billing);
+        }
         return billing;
 
     }

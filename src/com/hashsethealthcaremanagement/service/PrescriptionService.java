@@ -18,20 +18,25 @@ public class PrescriptionService {
     public Prescription createPrescription(){
 
         System.out.println("please enter id");
-        int pId = Integer.parseInt(scanner.nextLine());
+        int prescriptionId = Integer.parseInt(scanner.nextLine());
 
         System.out.println("please enter prescription details ");
-        String pDetails = scanner.nextLine();
+        String prescriptionDetails = scanner.nextLine();
 
         System.out.println("please enter person id");
         int personId = Integer.parseInt(scanner.nextLine());
 
         Prescription prescription = new Prescription();
-        prescription.setpId(pId);
-        prescription.setpDetails(pDetails);
+        prescription.setPrescriptionId(prescriptionId);
+        prescription.setPrescriptionDetails(prescriptionDetails);
         prescription.setPersonId(personId);
 
-        prescriptions.add(prescription);
+        if(prescriptions.contains(prescription)){
+            System.out.println("prescription already generated");
+        }
+        else {
+            prescriptions.add(prescription);
+        }
         return prescription;
     }
     public void displayPrescription(){

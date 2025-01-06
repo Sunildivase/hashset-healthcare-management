@@ -20,10 +20,10 @@ public class DoctorService {
         int doctorId = Integer.parseInt(scanner.nextLine());
 
         System.out.println("please enter first name");
-        String fName = scanner.nextLine();
+        String firstName = scanner.nextLine();
 
         System.out.println("please enter last name");
-        String lName = scanner.nextLine();
+        String lastName = scanner.nextLine();
 
         System.out.println("please enter age");
         int age = Integer.parseInt(scanner.nextLine());
@@ -42,15 +42,20 @@ public class DoctorService {
 
         Doctor doctor = new Doctor();
         doctor.setDoctorId(doctorId);
-        doctor.setfName(fName);
-        doctor.setlName(lName);
+        doctor.setFirstName(firstName);
+        doctor.setLastName(lastName);
         doctor.setAge(age);
         doctor.setGender(gender);
         doctor.setContactNo(contactNo);
         doctor.setSpeciality(speciality);
         doctor.setExperience(experience);
 
-        doctors.add(doctor);
+        if(doctors.contains(doctor)){
+            System.out.println("doctor already in system");
+        }
+        else {
+            doctors.add(doctor);
+        }
         return doctor;
 
     }

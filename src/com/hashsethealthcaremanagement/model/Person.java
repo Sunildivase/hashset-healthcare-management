@@ -6,8 +6,8 @@ public class Person {
 
     private int personId;
     private String type;
-    private String fName;
-    private String lName;
+    private String firstName;
+    private String lastName;
     private int age;
     private String gender;
     private String mobileNo;
@@ -19,8 +19,8 @@ public class Person {
         return "Person{" +
                 "personId=" + personId +
                 ", type='" + type + '\'' +
-                ", fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
+                ", fName='" + firstName + '\'' +
+                ", lName='" + lastName + '\'' +
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
                 ", mobileNo='" + mobileNo + '\'' +
@@ -45,20 +45,20 @@ public class Person {
         this.type = type;
     }
 
-    public String getfName() {
-        return fName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setfName(String fName) {
-        this.fName = fName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getlName() {
-        return lName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setlName(String lName) {
-        this.lName = lName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public int getAge() {
@@ -106,11 +106,11 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return getPersonId() == person.getPersonId() && getAge() == person.getAge() && Objects.equals(getType(), person.getType()) && Objects.equals(getfName(), person.getfName()) && Objects.equals(getlName(), person.getlName()) && Objects.equals(getGender(), person.getGender()) && Objects.equals(getMobileNo(), person.getMobileNo()) && Objects.equals(getAlternateMobile(), person.getAlternateMobile()) && Objects.equals(getAddress(), person.getAddress());
+        return getPersonId() == person.getPersonId() && getAge() == person.getAge() && Objects.equals(getType(), person.getType()) && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getGender(), person.getGender()) && Objects.equals(getMobileNo(), person.getMobileNo()) && Objects.equals(getAlternateMobile(), person.getAlternateMobile()) && Objects.equals(getAddress(), person.getAddress());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getPersonId());
+        return Objects.hash(getPersonId(), getType(), getFirstName(), getLastName(), getAge(), getGender(), getMobileNo(), getAlternateMobile(), getAddress());
     }
 }
